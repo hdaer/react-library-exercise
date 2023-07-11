@@ -1,20 +1,10 @@
-import { Category } from "./Category";
-
-export const Books = ({ books, borrowBook, returnBook }) => {
-
-const programmingBooks = books.filter((book) => {
-  return book.category === "programming";
-})
+export const Books = ({ amount, children }) => {
+  
 
   return (
     <>
-      <h2>Books: {books.length}</h2>
-      <Category
-        title="Programming"
-        programmingBooks={programmingBooks}
-        borrowBook={borrowBook}
-        returnBook={returnBook}
-      />
+      <h2>Books: {amount}</h2>
+      {children}
     </>
   );
 };
